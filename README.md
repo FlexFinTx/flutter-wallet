@@ -1,4 +1,4 @@
-# demo_app
+# flutter wallet
 
 A new Flutter project.
 

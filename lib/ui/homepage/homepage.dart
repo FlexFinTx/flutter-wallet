@@ -1,5 +1,5 @@
-import 'package:demo_app/styles.dart';
-import 'package:demo_app/ui/homepage/homepage_background.dart';
+import 'package:flexid_wallet/styles.dart';
+import 'package:flexid_wallet/ui/homepage/homepage_background.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
