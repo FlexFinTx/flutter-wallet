@@ -1,11 +1,20 @@
 import 'package:flexid_wallet/styles.dart';
+import 'package:flexid_wallet/ui/components/credential_details/credential_details.dart';
+import 'package:flexid_wallet/ui/components/flex_button/flex_button.dart';
 import 'package:flexid_wallet/ui/components/receive_credential_title/receive_credential_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flexid_wallet/ui/components/background/background.dart';
 
 class ReceiveCredential extends StatelessWidget {
+  final Map<String, String> _details = Map();
+
   @override
   Widget build(BuildContext context) {
+    _details["ID"] = "1234567890";
+    _details["Name"] = "Haardik";
+    _details["Date of Birth"] = "21 May, 1999";
+    _details["Age"] = "21";
+    _details["Address"] = "123 St, XYZ Avenue, Waterloo, Canada";
     return WillPopScope(
       onWillPop: () async => false,
       child: Scaffold(
@@ -51,8 +60,38 @@ class ReceiveCredential extends StatelessWidget {
                           child: ReceiveCredentialTitle("CBZ", "National ID"),
                         ),
                         SingleChildScrollView(
-                          child: Row(
-                            children: <Widget>[],
+                          child: Column(
+                            children: <Widget>[
+                              Row(
+                                children: <Widget>[
+                                  CredentialDetails(_details),
+                                ],
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Expanded(
+                                      child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 20.0),
+                                    child: ButtonTheme(
+                                      height: 50.0,
+                                      child: FlexButton(
+                                          "Reject", accentColor, null),
+                                    ),
+                                  )),
+                                  Expanded(
+                                      child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 20.0),
+                                    child: ButtonTheme(
+                                      height: 50.0,
+                                      child: FlexButton(
+                                          "Accept", primaryColor, null),
+                                    ),
+                                  )),
+                                ],
+                              ),
+                            ],
                           ),
                         ),
                       ],

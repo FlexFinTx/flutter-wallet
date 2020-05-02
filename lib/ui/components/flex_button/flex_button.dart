@@ -44,8 +44,10 @@ class FlexButton extends StatelessWidget {
         showSimpleCustomDialog(context);
         Timer(Duration(seconds: 5), () {
           Navigator.of(context).pop();
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => this._redirectTo));
+          if (this._redirectTo != null) {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => this._redirectTo));
+          }
         });
       },
     );
