@@ -1,5 +1,5 @@
 import 'package:flexid_wallet/styles.dart';
-import 'package:flexid_wallet/ui/homepage/homepage_background.dart';
+import 'package:flexid_wallet/ui/components/background/background.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
         body: Stack(
       children: <Widget>[
-        HomePageBackground(
+        PageBackground(
           screenHeight: MediaQuery.of(context).size.height,
         ),
         SafeArea(

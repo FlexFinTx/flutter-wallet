@@ -1,6 +1,6 @@
+import 'package:flexid_wallet/ui/pages/homepage/homepage.dart';
+import 'package:flexid_wallet/ui/pages/register/register.dart';
 import 'package:flutter/material.dart';
-
-import 'ui/homepage/homepage.dart';
 
 void main() => runApp(MyApp());
 

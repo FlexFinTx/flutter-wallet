@@ -1,24 +1,5 @@
 import 'package:flutter/material.dart';
 
-class HomePageBackground extends StatelessWidget {
-  final screenHeight;
-  const HomePageBackground({Key key, @required this.screenHeight})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    final themeData = Theme.of(context);
-
-    return ClipPath(
-      clipper: BottomShapeClipper(),
-      child: Container(
-        height: screenHeight * 0.5,
-        color: themeData.primaryColor,
-      ),
-    );
-  }
-}
-
 class BottomShapeClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
