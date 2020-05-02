@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-class FlexGreenButton extends StatelessWidget {
+class FlexButton extends StatelessWidget {
   final Widget _redirectTo;
   final String _buttonText;
+  final Color _buttonColor;
 
-  FlexGreenButton(this._buttonText, this._redirectTo);
+  FlexButton(this._buttonText, this._buttonColor, this._redirectTo);
 
   void showSimpleCustomDialog(BuildContext context) {
     WillPopScope simpleDialog = WillPopScope(
@@ -32,7 +33,7 @@ class FlexGreenButton extends StatelessWidget {
         this._buttonText,
         style: TextStyle(fontSize: 18.0),
       ),
-      color: Theme.of(context).primaryColor,
+      color: this._buttonColor,
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(18.0),
           side: BorderSide(color: Colors.white)),

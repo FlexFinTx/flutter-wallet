@@ -1,3 +1,4 @@
+import 'package:flexid_wallet/styles.dart';
 import 'package:flexid_wallet/ui/pages/register/register.dart';
 import 'package:flutter/material.dart';
 
@@ -12,8 +13,8 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           scaffoldBackgroundColor: Color(0xFFFFFFFF),
-          primaryColor: Color(0xFF39BE84),
-          accentColor: Color(0xFFBF3973),
+          primaryColor: primaryColor,
+          accentColor: accentColor,
         ),
         home: Register());
   }

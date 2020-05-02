@@ -1,8 +1,8 @@
+import 'package:flexid_wallet/styles.dart';
 import 'package:flexid_wallet/ui/components/datepicker/datepicker.dart';
-import 'package:flexid_wallet/ui/components/flex_green_button/flex_green_button.dart';
+import 'package:flexid_wallet/ui/components/flex_button/flex_button.dart';
 import 'package:flexid_wallet/ui/pages/receive_credential/receive_credential.dart';
 import 'package:flutter/material.dart';
-import 'dart:async';
 
 class RegisterForm extends StatefulWidget {
   @override
@@ -82,7 +82,8 @@ class RegisterFormState extends State<RegisterForm> {
                 child: ButtonTheme(
                   minWidth: 200.0,
                   height: 50.0,
-                  child: FlexGreenButton("Submit", ReceiveCredential()),
+                  child:
+                      FlexButton("Submit", primaryColor, ReceiveCredential()),
                 ),
               ),
             ],

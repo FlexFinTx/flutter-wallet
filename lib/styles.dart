@@ -8,3 +8,12 @@ final TextStyle whiteHeadingTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
   color: Color(0xFFFFFFFF),
 );
+
+final TextStyle whiteBodyTextStyle = TextStyle(
+  fontSize: 26.0,
+  color: Color(0x99FFFFFF),
+);
+
+final Color primaryColor = Color(0xFF39BE84);
+
+final Color accentColor = Color(0xFFBF3973);
