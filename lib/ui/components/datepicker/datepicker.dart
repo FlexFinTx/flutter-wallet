@@ -25,7 +25,7 @@ class DatePickerState extends State<DatePicker> {
     final DateTime picked = await showDatePicker(
       context: context,
       initialDate: selectedDate,
-      firstDate: DateTime.now().subtract(Duration(days: _YEAR * 10)),
+      firstDate: DateTime.now().subtract(Duration(days: _YEAR * 100)),
       lastDate: DateTime.now().add(Duration(days: _YEAR * 10)),
     );
     if (picked != null) {

@@ -1,4 +1,5 @@
 import 'package:flexid_wallet/ui/components/datepicker/datepicker.dart';
+import 'package:flexid_wallet/ui/components/flex_green_button/flex_green_button.dart';
 import 'package:flexid_wallet/ui/pages/receive_credential/receive_credential.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
@@ -25,24 +26,6 @@ class RegisterFormState extends State<RegisterForm> {
         _loadingVisible = true;
       });
     }
-  }
-
-  void showSimpleCustomDialog(BuildContext context) {
-    WillPopScope simpleDialog = WillPopScope(
-        onWillPop: () async => false,
-        child: Dialog(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.0),
-          ),
-          child: Container(
-              height: 100,
-              width: 100,
-              child: Center(child: CircularProgressIndicator())),
-        ));
-    showDialog(
-        context: context,
-        barrierDismissible: false,
-        builder: (BuildContext context) => simpleDialog);
   }
 
   @override
@@ -99,31 +82,7 @@ class RegisterFormState extends State<RegisterForm> {
                 child: ButtonTheme(
                   minWidth: 200.0,
                   height: 50.0,
-                  child: FlatButton(
-                    child: Text(
-                      'Submit',
-                      style: TextStyle(fontSize: 18.0),
-                    ),
-                    color: Theme.of(context).primaryColor,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                        side: BorderSide(color: Colors.white)),
-                    textColor: Colors.white,
-                    onPressed: () {
-                      // Validate returns true if the form is valid, or false
-                      // otherwise.
-                      if (_formKey.currentState.validate()) {
-                        showSimpleCustomDialog(context);
-                        Timer(Duration(seconds: 5), () {
-                          Navigator.of(context).pop();
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => ReceiveCredential()));
-                        });
-                      }
-                    },
-                  ),
+                  child: FlexGreenButton("Submit", ReceiveCredential()),
                 ),
               ),
             ],

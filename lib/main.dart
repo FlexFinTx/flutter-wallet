@@ -1,4 +1,3 @@
-import 'package:flexid_wallet/ui/pages/homepage/homepage.dart';
 import 'package:flexid_wallet/ui/pages/register/register.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +15,6 @@ class MyApp extends StatelessWidget {
           primaryColor: Color(0xFF39BE84),
           accentColor: Color(0xFFBF3973),
         ),
-        home: HomePage());
+        home: Register());
   }
 }
