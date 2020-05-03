@@ -3,6 +3,7 @@ import 'package:flexid_wallet/ui/components/datepicker/datepicker.dart';
 import 'package:flexid_wallet/ui/components/flex_button/flex_button.dart';
 import 'package:flexid_wallet/ui/pages/receive_credential/receive_credential.dart';
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 class RegisterForm extends StatefulWidget {
   @override
@@ -24,6 +25,38 @@ class RegisterFormState extends State<RegisterForm> {
     } else {
       setState(() {
         _loadingVisible = true;
+      });
+    }
+  }
+
+  void showSimpleCustomDialog(BuildContext context) {
+    WillPopScope simpleDialog = WillPopScope(
+        onWillPop: () async => false,
+        child: Dialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12.0),
+          ),
+          child: Container(
+              height: 100,
+              width: 100,
+              child: Center(
+                  child: CircularProgressIndicator(
+                valueColor: AlwaysStoppedAnimation<Color>(secondaryColor),
+              ))),
+        ));
+    showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) => simpleDialog);
+  }
+
+  void onSubmitPressed() {
+    if (_formKey.currentState.validate()) {
+      showSimpleCustomDialog(context);
+      Timer(Duration(seconds: 5), () {
+        Navigator.of(context).pop();
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => ReceiveCredential()));
       });
     }
   }
@@ -82,8 +115,8 @@ class RegisterFormState extends State<RegisterForm> {
                 child: ButtonTheme(
                   minWidth: 200.0,
                   height: 50.0,
-                  child:
-                      FlexButton("Submit", primaryColor, ReceiveCredential()),
+                  child: FlexButton(
+                      "Submit", primaryColor, () => this.onSubmitPressed()),
                 ),
               ),
             ],

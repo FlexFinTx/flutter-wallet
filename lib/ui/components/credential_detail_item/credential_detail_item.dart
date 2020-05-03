@@ -1,4 +1,3 @@
-import 'package:flexid_wallet/styles.dart';
 import 'package:flexid_wallet/ui/components/flex_list_tile/flex_list_tile.dart';
 import 'package:flutter/material.dart';
 

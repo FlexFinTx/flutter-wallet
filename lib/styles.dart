@@ -15,5 +15,5 @@ final TextStyle whiteBodyTextStyle = TextStyle(
 );
 
 final Color primaryColor = Color(0xFF39BE84);
-
-final Color accentColor = Color(0xFFBF3973);
+final Color secondaryColor = Color(0xFF2b303a);
+final Color accentColor = Color(0xFFEE6352);

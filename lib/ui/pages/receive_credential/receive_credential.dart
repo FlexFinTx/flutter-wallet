@@ -83,7 +83,7 @@ class ReceiveCredential extends StatelessWidget {
                                     child: ButtonTheme(
                                       height: 50.0,
                                       child: FlexButton(
-                                          "Reject", accentColor, null),
+                                          "Reject", accentColor, () => null),
                                     ),
                                   )),
                                   Expanded(
@@ -93,7 +93,7 @@ class ReceiveCredential extends StatelessWidget {
                                     child: ButtonTheme(
                                       height: 50.0,
                                       child: FlexButton(
-                                          "Accept", primaryColor, null),
+                                          "Accept", primaryColor, () => null),
                                     ),
                                   )),
                                 ],

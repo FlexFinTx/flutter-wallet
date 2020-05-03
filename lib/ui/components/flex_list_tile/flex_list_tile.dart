@@ -27,8 +27,8 @@ class FlexListTile extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.right,
                 maxLines: 5,
-                style:
-                    TextStyle(color: accentColor, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    color: secondaryColor, fontWeight: FontWeight.bold),
               ),
             ),
           ],

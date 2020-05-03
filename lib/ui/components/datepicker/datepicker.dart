@@ -50,6 +50,11 @@ class DatePickerState extends State<DatePicker> {
                 hintText: "Birthdate",
                 contentPadding: EdgeInsets.zero,
               ),
+              validator: (value) {
+                if (value == "") {
+                  return "Please select a date";
+                }
+              },
             ),
           ),
         ),

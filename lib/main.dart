@@ -12,10 +12,10 @@ class MyApp extends StatelessWidget {
         title: 'FlexID Wallet',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          scaffoldBackgroundColor: Color(0xFFFFFFFF),
-          primaryColor: primaryColor,
-          accentColor: accentColor,
-        ),
+            scaffoldBackgroundColor: Color(0xFFFFFFFF),
+            primaryColor: primaryColor,
+            accentColor: accentColor,
+            fontFamily: "ProductSans"),
         home: Register());
   }
 }
