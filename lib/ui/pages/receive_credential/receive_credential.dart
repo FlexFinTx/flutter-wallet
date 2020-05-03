@@ -15,6 +15,13 @@ class ReceiveCredential extends StatelessWidget {
     _details["Date of Birth"] = "21 May, 1999";
     _details["Age"] = "21";
     _details["Address"] = "123 St, XYZ Avenue, Waterloo, Canada";
+    _details["ABC"] = "XYZ";
+    _details["ABC6"] = "XYZ";
+    _details["ABC5"] = "XYZ";
+    _details["ABC4"] = "XYZ";
+    _details["ABC3"] = "XYZ";
+    _details["ABC2"] = "XYZ";
+    _details["ABC1"] = "XYZ";
     return WillPopScope(
       onWillPop: () async => false,
       child: Scaffold(
@@ -53,7 +60,7 @@ class ReceiveCredential extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 32.0,
+                          height: 10.0,
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 32.0),

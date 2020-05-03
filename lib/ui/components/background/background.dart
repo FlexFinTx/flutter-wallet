@@ -13,7 +13,7 @@ class PageBackground extends StatelessWidget {
     return ClipPath(
       clipper: BottomShapeClipper(),
       child: Container(
-        height: screenHeight * 0.5,
+        height: screenHeight * 0.33,
         color: themeData.primaryColor,
       ),
     );

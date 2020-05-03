@@ -14,7 +14,7 @@ class CredentialDetails extends StatelessWidget {
       items.add(CredentialDetailItem(k, v));
     });
     return Container(
-      margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.2),
+      margin: EdgeInsets.only(top: 30.0),
       width: MediaQuery.of(context).size.width,
       child: ListView.builder(
         physics: NeverScrollableScrollPhysics(),

@@ -10,7 +10,7 @@ final TextStyle whiteHeadingTextStyle = TextStyle(
 );
 
 final TextStyle whiteBodyTextStyle = TextStyle(
-  fontSize: 26.0,
+  fontSize: 22.0,
   color: Color(0x99FFFFFF),
 );
 
