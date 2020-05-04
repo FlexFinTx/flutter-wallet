@@ -54,9 +54,7 @@ class RegisterFormState extends State<RegisterForm> {
     if (_formKey.currentState.validate()) {
       showSimpleCustomDialog(context);
       Timer(Duration(seconds: 5), () {
-        Navigator.of(context).pop();
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => ReceiveCredential()));
+        Navigator.of(context).popAndPushNamed("/receive");
       });
     }
   }
@@ -67,7 +65,7 @@ class RegisterFormState extends State<RegisterForm> {
     return Form(
       key: _formKey,
       child: Container(
-        margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.2),
+        margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.15),
         width: MediaQuery.of(context).size.width,
         child: Container(
           padding: EdgeInsets.all(16.0),

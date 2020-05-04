@@ -33,10 +33,7 @@ class Register extends StatelessWidget {
                             Text(
                               "Flex Digital Identity Wallet",
                               style: fadedTextStyle,
-                            ),
-                            Spacer(),
-                            Icon(Icons.person_outline,
-                                color: Color(0x99FFFFFF), size: 30),
+                            )
                           ],
                         ),
                       ),
