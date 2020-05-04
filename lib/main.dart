@@ -2,6 +2,8 @@ import 'package:flexid_wallet/styles.dart';
 import 'package:flexid_wallet/ui/pages/register/register.dart';
 import 'package:flutter/material.dart';
 
+import 'ui/pages/homepage/homepage.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
             primaryColor: primaryColor,
             accentColor: accentColor,
             fontFamily: "ProductSans"),
-        home: Register());
+        // home: Register());
+        home: HomePage());
   }
 }
