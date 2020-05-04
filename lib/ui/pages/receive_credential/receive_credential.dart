@@ -45,10 +45,7 @@ class ReceiveCredential extends StatelessWidget {
                               Text(
                                 "Flex Digital Identity Wallet",
                                 style: fadedTextStyle,
-                              ),
-                              Spacer(),
-                              Icon(Icons.person_outline,
-                                  color: Color(0x99FFFFFF), size: 30),
+                              )
                             ],
                           ),
                         ),
@@ -82,8 +79,8 @@ class ReceiveCredential extends StatelessWidget {
                                         vertical: 20.0),
                                     child: ButtonTheme(
                                       height: 50.0,
-                                      child: FlexButton(
-                                          "Reject", accentColor, () => null),
+                                      child: FlexButton("Reject", accentColor,
+                                          () => Navigator.of(context).pop()),
                                     ),
                                   )),
                                   Expanded(
@@ -93,7 +90,12 @@ class ReceiveCredential extends StatelessWidget {
                                     child: ButtonTheme(
                                       height: 50.0,
                                       child: FlexButton(
-                                          "Accept", primaryColor, () => null),
+                                          "Accept",
+                                          primaryColor,
+                                          () => {
+                                                Navigator.of(context)
+                                                    .pushNamed("/homepage")
+                                              }),
                                     ),
                                   )),
                                 ],

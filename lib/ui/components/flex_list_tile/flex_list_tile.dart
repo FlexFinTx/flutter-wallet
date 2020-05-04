@@ -19,7 +19,7 @@ class FlexListTile extends StatelessWidget {
             Text(
               this._leftText,
               style:
-                  TextStyle(color: primaryColor, fontWeight: FontWeight.bold),
+                  TextStyle(color: secondaryColor, fontWeight: FontWeight.bold),
             ),
             Expanded(
               child: Text(
@@ -27,8 +27,8 @@ class FlexListTile extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.right,
                 maxLines: 5,
-                style: TextStyle(
-                    color: secondaryColor, fontWeight: FontWeight.bold),
+                style:
+                    TextStyle(color: primaryColor, fontWeight: FontWeight.bold),
               ),
             ),
           ],

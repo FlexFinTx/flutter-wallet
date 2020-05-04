@@ -1,5 +1,6 @@
 import 'package:flexid_wallet/styles.dart';
 import 'package:flexid_wallet/ui/components/background/background.dart';
+import 'package:flexid_wallet/ui/components/credential_card/credential_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flexid_wallet/ui/components/navigation_bar/bottom_navigation_bar.dart';
 
@@ -42,7 +43,12 @@ class HomePage extends StatelessWidget {
                     ),
                     SingleChildScrollView(
                       child: Row(
-                        children: <Widget>[],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          CredentialCard(
+                            "https://i.imgur.com/29gufWO.png",
+                          ),
+                        ],
                       ),
                     ),
                   ],

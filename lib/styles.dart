@@ -6,12 +6,17 @@ final TextStyle fadedTextStyle = TextStyle(
 final TextStyle whiteHeadingTextStyle = TextStyle(
   fontSize: 40.0,
   fontWeight: FontWeight.bold,
-  color: Color(0xFFFFFFFF),
+  color: Colors.white,
 );
 
 final TextStyle whiteBodyTextStyle = TextStyle(
   fontSize: 22.0,
   color: Color(0x99FFFFFF),
+);
+
+final TextStyle credentialHeadingTextStyle = TextStyle(
+  fontSize: 22.0,
+  color: Colors.white,
 );
 
 final Color primaryColor = Color(0xFF39BE84);
