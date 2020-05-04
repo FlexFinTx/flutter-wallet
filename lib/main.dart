@@ -5,6 +5,9 @@ import 'package:flexid_wallet/ui/pages/register/register.dart';
 import 'package:flexid_wallet/ui/pages/view_credential/view_credential.dart';
 import 'package:flutter/material.dart';
 
+import 'ui/pages/homepage/homepage.dart';
+import 'ui/pages/homepage/homepage.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
             primaryColor: primaryColor,
             accentColor: accentColor,
             fontFamily: "ProductSans"),
-        home: Register(),
+        home: HomePage(),
         routes: <String, WidgetBuilder>{
           "/homepage": (BuildContext context) => HomePage(),
           "/register": (BuildContext context) => Register(),
